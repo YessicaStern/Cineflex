@@ -16,6 +16,8 @@ function App() {
   const [urlMovie,setUrlMovie]=React.useState("");
   const [movieDate,setMovieDate]=React.useState("");
   const [movieDay,setMovieDay]=React.useState("");
+  const [name,setName]= React.useState("");
+  const [cpf,setCpf]= React.useState("");
   return (
     <> 
     <BrowserRouter>
@@ -23,7 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MovieList setOk={setOk} setNameMovie={setNameMovie} setUrlMovie={setUrlMovie} />} />
         <Route path="/sessao/:IdMovies" element={<MovieTime setOk={setOk} urlMovie={urlMovie} nameMovie={nameMovie} setMovieDate={setMovieDate} setMovieDay={setMovieDay}/>}/>
-        <Route path="/assentos/:IdTime" element={<Places nameMovie={nameMovie} movieDay={movieDay}/>}/>
+        <Route path="/assentos/:IdTime" element={<Places nameMovie={nameMovie} movieDay={movieDay} name={name} cpf={cpf} setName={setName} setCpf={setCpf} />}/>
       </Routes>
       
       {ok ? (<Bottom nameMovie={nameMovie} urlMovie={urlMovie} movieDate={movieDate} movieDay={movieDay}/>):(console.log())}

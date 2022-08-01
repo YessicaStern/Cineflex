@@ -6,22 +6,25 @@ import "./Places.css"
 
 
 function Place({place,id,available}){
-    const [selecionado,setSelecionado]=useState(false);
 
     let seats="place available"; 
    
-    if(selecionado===false){ 
+    if(available===false){ 
         seats="place unavailable"         
-    }if(selecionado===true){
+    }if(available===true){
         seats="place available"
     }
 
     function Avaliar(){
-    setSelecionado(!selecionado);
+    if(available===false){ 
+        alert("Esse assento não está disponível");         
+    }if(available==true){
+        alert("ok")
     }
-    
+    }
 
     return(<div className={seats} onClick={Avaliar}>{place}</div>);
+
  
 }
 
@@ -32,7 +35,7 @@ function Place({place,id,available}){
 
 
 
-export default function Places(){
+export default function Places({name,setName,cpf,setCpf}){
     const params=useParams();
     const [places,setPlaces]=React.useState([]);
    
@@ -41,6 +44,12 @@ export default function Places(){
         const promise = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/showtimes/${params.IdTime}/seats`);
         promise.then((response)=>{console.log(response.data.seats);setPlaces(response.data.seats)});
         },[]);
+
+
+    function handleForm(e){
+        e.preventDefault();
+    }
+
     
     return(
     <div className="allPlaces">
@@ -55,12 +64,13 @@ export default function Places(){
                 <div className="boxMarking"><div className="unavailable"></div>Indisponível</div>
             </div>
         </div>
-        <form className="dataInput">
+        <form onSubmit={handleForm} className="dataInput">
             <h3>Nome do comprador:</h3>
-            <input type="text" className="nameInput" placeholder="Digite seu nome..."></input>
+            <input type="text" required className="nameInput" placeholder="Digite seu nome..." onChange={(e)=>(setName(e.target.value))}></input>
+
             <h3>CPF do comprador:</h3>
-            <input type="text" className="cpfInput" placeholder="Digite seu CPF..."></input>
-            <button className="reserveButton">Reservar assento(s)</button>
+            <input type="text" required className="cpfInput" placeholder="Digite seu CPF..." onChange={(e)=>(setCpf(e.target.value))}></input>
+            <button className="reserveButton" type="submit"> Reservar assento(s)</button>
         </form>
 
     </div>);
