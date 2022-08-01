@@ -1,0 +1,118 @@
+.allPlaces{
+    width: 375px;
+    height: 690px;
+    margin-top: 67px;
+    overflow-y: scroll;
+}
+
+.places{
+    width: 375px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 16px;
+
+}
+.place{
+    width: 24px;
+    height: 24px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin: 5px;
+}
+.marking{
+    width: 90%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 15px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.013em;
+    color: #4E5A65;
+}
+.selected,.available,.unavailable{
+    width: 25px;
+    height: 25px;
+    border-radius: 17px;
+    margin-bottom: 10px;
+}
+.selected{
+    background: #8DD7CF;
+    border: 1px solid #1AAE9E;
+}
+.available{
+    background: #C3CFD9;
+    border: 1px solid #7B8B99;
+}
+.unavailable{
+    background: #FBE192;
+    border: 1px solid #F7C52B;
+}
+.boxMarking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dataInput{
+    display:flex;
+    flex-direction: column;
+    padding-left: 25px;
+    margin-top: 30px;
+}
+.nameInput, .cpfInput{
+    width: 327px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    padding-left: 20px;
+    font-family: 'Roboto',sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    align-items: center;
+    color: #AFAFAF;
+    outline: none;    
+}
+.reserveButton{
+    width: 225px;
+    height: 42px;
+    background: #E8833A;
+    border-radius: 3px;
+    border-color: transparent;
+    margin-top: 45px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    
+}
+.dataInput h3{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #293845;
+    margin-bottom: 5px;  
+    margin-top: 15px;  
+}

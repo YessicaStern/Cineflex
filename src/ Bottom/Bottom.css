@@ -1,0 +1,43 @@
+.imgBottom{
+    width: 48px;
+    height: 72px;
+}
+.boxImgBot{
+    width: 64px;
+    height: 89px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom{
+    width: 375px;
+    height: 117px;
+    background: #DFE6ED;
+    border-top: 1px solid #9EADBA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+.bottomBox{
+    width: 375px;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: #293845;  
+}
+.bottomBox h3{
+    margin-left: 20px;
+}
+.bottomData{
+    display: flex;
+    flex-direction: column;
+}

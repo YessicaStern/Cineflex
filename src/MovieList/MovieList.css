@@ -1,10 +1,11 @@
 .movieList{
     width: 375px;
     height: 810px;
+    margin-top: 67px;
     overflow-y: scroll;
 }
 
-.watch-movie{
+.watch{
     width: 375px;
     height: 110px;
     font-family: 'Roboto',sans-serif;

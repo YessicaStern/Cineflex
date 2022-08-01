@@ -7,6 +7,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
 }
 .Top h1{
     font-family: 'Roboto', sans-serif;
